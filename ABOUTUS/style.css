@@ -1,0 +1,135 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body
+{
+	font-family: Arial MT Bold;
+	background-image: linear-gradient(rgb(240, 240, 240),white);
+	
+}
+
+h1
+{
+	font-size: 35px;
+	color: rgb(255, 251, 251);
+	text-align: center;
+	padding: 10px;
+	text-shadow: 1px 2px #000000;
+}
+
+/* .par
+{
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	position: absolute;
+	text-align: justify;
+	font-size: 1.1vw;
+	padding: 2% 10% 5% 10%;
+	font-weight: 1;
+	width: 100%;
+	color: rgb(245, 245, 245);
+	background: rgb(0,0,0,.6);
+	text-shadow: 1px 1px #a1a1a1;
+} */
+
+
+.story
+{
+	padding: 10px;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@media only screen and (max-width:700px){
+		navbar{
+		width: 100%;
+		background: linear-gradient(#ffC831, #ffE450);
+		position: fixed;
+		top: 75px;
+		right:0;
+		z-index:2;
+		}
+		mastHead{
+			flex-direction: column-reverse;
+			margin: 50px 0;
+		}
+		.color-box{
+			transform: translateX(75px);
+		}
+		.color-box{
+			flex-basis: 100%;
+		}
+		.color-box .font{
+			font-size: 30px;
+		}
+	}
+@media (max-width: 768px){
+	.mastHead{
+		min-height:30vh;
+	}
+}
+
+/* Slideshow container */
+.slideshow-container {
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+	margin-bottom:-1%;
+  }
+  
+  /* Caption text */
+  .text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+  }
+  
+  .active {
+	background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+  .footerText{
+	color: #696969;
+	text-decoration: none;
+  }
+  .footerText:hover{
+	color: #008000;
+  }

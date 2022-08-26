@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Open Sans');
+.contents{    
+    background-image: url(bg.png);
+	background-size: cover;
+	display: inline-flex;
+}
+.seal{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.Heading1{
+	text-shadow: 1px 2px;
+	text-align: center;
+	font-family: Verdana;
+	font-size: 40px;
+	font-weight: bold;
+}
+.meaning{
+	margin-left: 20px;
+	margin-top: 0;
+	text-align: justify;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 13px;
+	width: auto;
+	height: auto;
+	padding: 10px;
+	background-color:white;
+	border: 7px transparent;
+	box-shadow: 0 0 0 7px green;
+	border-radius: 25px;
+}
+.allignment{
+	margin-bottom: .625rem!important;
+	margin-left: 20px;
+}
+
+.hymn{
+	width: 50%;
+	float: right;
+}
+.Heading2{
+	text-shadow: 1px 2px;
+	text-align: center;
+	font-family: Verdana;
+	font-size: 40px;
+	font-weight: bold;
+}
+.audio{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+.lyrics{
+	margin: auto;
+	padding: auto;
+	text-align: center;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 13px;
+	width: 300px;
+	height: auto;
+	background-color:white;
+	border: 7px transparent;
+	box-shadow: 0 0 0 7px green;
+	border-radius: 25px;
+}
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
