@@ -1,0 +1,60 @@
+.sort button{
+    background-color: rgb(230, 172, 62);
+    border-radius: 4px;
+    border: none;
+    color:  white;
+    padding: 13px 20px;
+    font-weight: 700;
+}
+/* Table */
+.table-container-1{
+    overflow-y: auto;   
+    width: 100%;
+    border-radius: 4px;
+}
+.table-container-1 tr{
+    border-top: 1px solid rgb(232, 225, 225);
+}
+.table-container-1 table{
+    border-collapse: collapse;
+    background-color: white;
+    width: 100%;
+}
+.table-container-1 th, td{
+    text-align: center;   
+}
+.table-container-1 th{
+    padding: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(50, 155, 86);
+    text-transform: uppercase;  
+}
+.table-container-1 td{
+    padding: 17px;
+    color: gray;
+}
+/* Dropdown */
+.select-dropdown input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: red;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+}
+.select-dropdown .option a{
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}

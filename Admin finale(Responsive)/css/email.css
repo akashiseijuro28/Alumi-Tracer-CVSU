@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+.container-2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    height: 50px  /* changed*/;
+    background-color: rgb(50, 155, 86);
+    padding: 4px 25px;
+    z-index: 200;
+}
+.toggle{
+    border-radius: 50%;
+    padding: 2px 10px;
+    transition: 0.15s ease-in;
+    margin-top: 6px; /* changed*/
+    cursor: pointer;
+    display: none; 
+}
+.toggle:active{
+    background-color: white;
+    opacity: 0.7;
+    color: rgb(50, 155, 86); 
+}
+.toggle, .logo{
+    font-size: 17px;
+    color: white;
+}
+.logo{
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    max-width:43px; /* changed*/
+    height: auto;
+}
+.name{
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 9px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;  /* changed*/
+}
+/* content */
+.content-box{
+    position: absolute;
+    width: 100%;
+    padding: 10px; /* changed*/
+    padding-left: 286px; /* changed*/
+    transition: 0.15s ease-in; 
+}
+.content-box-active{
+    padding-left: 20%;
+}
+.content{
+    position: relative;
+    width: 100%;  
+    padding: 20px;
+}
+.head-page h1{
+    border-bottom: 2px solid rgb(232, 225, 225);
+    padding: 15px 0;
+    font-weight: 500;
+    font-size: 25px;
+    color: rgb(72, 62, 62);
+}
+.email-container{
+    margin-top: 20px;
+    border-radius: 4px;
+    background-color: white;
+    padding: 40px 200px 35px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.email-container .email-content form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 10px;
+}
+.row-1{
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+}
+.email-label{
+    padding: 20px 0;
+    width: 100px;
+    font-weight: 500;
+    color: rgb(72, 62, 62);
+}
+.email-input{
+    position: relative;
+    flex: 1;
+}
+.email-input i{
+    position: absolute;
+    left: 20px;
+    top: 35%;
+    color: gray;
+}
+input{
+    width: 100%;
+    padding: 20px 20px 20px 50px;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    outline-color: rgb(230, 172, 62);
+}
+textarea{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0 0 47px;
+    border: 1px solid silver;
+    border-radius: 4px;
+    outline-color: rgb(230, 172, 62);
+}
+#comment{
+    top: 16.5%;
+}
+.send-button{
+    display: flex;
+    margin-top: 18px;
+    justify-content: flex-end;
+}
+span{
+    padding: 10px;
+}
+button{
+    width: 120px;
+    padding: 12px;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(230, 172, 62);
+    transition: 0.15s ease-in-out;
+}
+button:active{
+    background-color: rgb(50, 155, 86);
+    transform: scale(0.99);
+    opacity: 0.9;
+}
+/* side bar*/
+.side-bar{
+    position: fixed;
+    background-color: white;
+    width: 275px;
+    height: 94%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    z-index: 100;
+    transition: transform 0.15s ease-in;
+}
+.side-bar-list{ 
+    padding: 20px 0px;
+}
+#icon{
+    color:#329B56;
+    font-size: 16px;
+    width: 45px;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 2px 0;
+    user-select: none;  
+} 
+.list a{
+    text-decoration: none;
+    color: rgb(65, 60, 60);
+    font-weight: 500;
+    font-size: 13px;
+    padding: 7px 0 7px 35px;
+    letter-spacing: 1px;
+    cursor: pointer; 
+}
+.list a:hover{
+    background: whitesmoke;
+}
+.side-bar-active{
+    transform: translateX(0);
+}
+.list-drpdown{
+    display: flex;
+    flex-direction: column;
+    margin-left: 37px;
+    border-left: 3px solid gainsboro;
+    padding-left: 15px;
+    padding-right: 15px;
+    user-select: none;
+    display: none; 
+}
+.list-drpdown a{
+    text-decoration: none;
+    padding-left: 23px;
+    cursor: pointer;
+}
+.list-drpdown a:hover{
+    background: whitesmoke;
+}
+.fa-circle-o{
+    padding-right: 5px;
+}
+.items{
+    font-size: 12px;
+    color:gray;
+    font-weight: 500;
+}
+/* Alumni */
+.list-drpdown-1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 37px;
+    border-left: 3px solid gainsboro;
+    padding-left: 15px;
+    padding-right: 15px;
+    user-select: none;
+    display: none; 
+}
+.list-drpdown-1 a{
+    text-decoration: none;
+    padding-left: 23px;
+    cursor: pointer;
+}
+.list-drpdown-1 a:hover{
+    background: whitesmoke;
+}
+.items-1{
+    font-size: 12px;
+    color:gray;
+    font-weight: 500;
+}
+#arrow{
+    margin-left: 59px;
+}
+#arrow-1{
+    margin-left: 103px;
+}
+.active-2, .active-3{
+    display: block;
+    display: flex;
+}
+
+ /* Desktop */
+ @media (min-width:1501px){
+    .toggle{
+        display: none;
+    }
+    .content-box{
+        padding: 10px;
+        padding-left: 286px;
+    }
+}
+ @media (min-width:1024px) and (max-width:1500px){
+    .toggle{
+        display: none;
+    }
+    .content-box{
+        padding: 10px;
+        padding-left: 286px;
+    }
+    .email-container{
+        padding: 50px 50px 44px;
+    }
+    .email-label{
+        width: 90px;
+    }
+    button{
+        width: 100px;
+    }
+}
+/* Tablet */
+@media (min-width:768px) and (max-width:1023px){
+    .toggle{
+        display: block;
+    }
+    .content-box{
+       padding-left: 10px;
+    }
+     /* Side bar */
+     .side-bar{
+        transform: translateX(-100%);
+    }
+    .side-bar-active{
+        transform: translateX(0);
+    }
+    .email-container{
+        padding: 50px 50px 44px;
+    }
+    .email-label{
+        width: 85px;
+    }
+    textarea{
+        padding: 10px 0 0 47px;
+        margin-top: 20px;
+    }
+    button{
+        width: 100px;
+    }
+}
+
+/* Mobile */
+@media (min-width:631px) and (max-width:767px){
+    .toggle{
+        display: block;
+    }
+    .content-box{
+       padding-left: 10px;
+    }
+     /* Side bar */
+     .side-bar{
+        transform: translateX(-100%);
+    }
+    .side-bar-active{
+        transform: translateX(0);
+    }
+    .email-container{
+        padding: 50px 50px 44px;
+    }
+    .row-1{
+        flex-direction: column;
+    }
+    .email-input, .email-label{
+        width: 100%;
+    }
+    .email-label{
+        padding: 10px 0;
+    }
+    #concern-label{
+        margin-top: 15px;
+    }
+    textarea{
+        padding: 29.5px 0 0 47px;
+        margin-top: 0;
+    }
+    button{
+        width: 50%;
+    }
+}
+@media (max-width:630px){
+    .toggle{
+        display: block;
+    }
+    .content-box{
+       padding-left: 10px;
+    }
+     /* Side bar */
+     .side-bar{
+        transform: translateX(-100%);
+    }
+    .side-bar-active{
+        transform: translateX(0);
+    }
+    .email-container{
+        padding: 30px 20px 28px;
+    }
+    .row-1{
+        flex-direction: column;
+    }
+    .email-input, .email-label{
+        width: 100%;
+    }
+    .email-label{
+        padding: 7px 0;
+    }
+    #concern-label{
+        margin-top: 15px;
+    }
+    textarea{
+        padding: 29px 0 0 47px;
+        margin-top: 0;
+    }
+    button{
+        width: 50%;
+    }
+
+}
+

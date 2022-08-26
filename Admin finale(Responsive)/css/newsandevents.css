@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+.container-2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    height: 50px  /* changed*/;
+    background-color: rgb(50, 155, 86);
+    padding: 4px 25px;
+    z-index: 200;
+}
+.toggle{
+    border-radius: 50%;
+    padding: 2px 10px;
+    transition: 0.15s ease-in;
+    margin-top: 6px; /* changed*/
+    cursor: pointer;
+    display: none; 
+}
+.toggle, .logo{
+    font-size: 17px;
+    color: white;
+}
+.logo{
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    max-width:43px; /* changed*/
+    height: auto;
+}
+.name{
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 9px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;  /* changed*/
+}
+/* content */
+.content-box{
+    position: absolute;
+    width: 100%;
+    padding: 10px; /* changed*/
+    padding-left: 286px; /* changed*/
+    transition: 0.15s ease-in; 
+}
+.content-box-active{
+    padding-left: 20%;
+}
+.content{
+    position: relative;
+    width: 100%;  
+    padding: 20px;
+}
+.head-page h1{
+    border-bottom: 2px solid rgb(232, 225, 225);
+    padding: 15px 0;
+    font-weight: 500;
+    font-size: 25px;
+    color: rgb(72, 62, 62);
+}
+.wrapper{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 5px;
+    padding: 30px;
+}
+.row-1{
+    display: flex; 
+}
+.buttons, .cty{
+    flex: 1;
+}
+.buttons{
+    padding-left: 50px;
+}
+.buttons button{
+    margin-right: 10px;
+    width: 120px;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+}
+.cty{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+.cty select{
+    width: 50%;
+    padding-left: 10px;
+    border: none;
+    border-right: 10px solid white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 20px;
+    outline-color: gainsboro;
+}
+.cty option{
+    color: gray;
+}
+.row-2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    display: flex;
+    width: 33.3%;
+    gap: 0 20px;
+    padding: 10px 50px;
+}
+.date, .text{
+    flex: 1;
+}
+.date{
+    color: white;
+    text-align: center;
+    background-color: rgb(50, 155, 86);
+    border-radius: 4px;
+    padding: 40px 10px;
+    text-transform: uppercase;
+}
+.date h1{
+    font-size: 50px;
+}
+.text h1, .text p{
+    color: rgb(72, 62, 62);
+    font-weight: 500;
+    padding: 10px;
+}
+.text h1{
+    font-weight: 600;
+}
+.row-3{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 0;
+}
+.row-3 button{
+    width: 150px;
+    padding: 15px;
+    color: white;
+    border: none;
+    background-color: rgb(230, 172, 62);
+    border-radius: 4px;
+}
+button{
+    transition: 0.15s;
+}
+button:active{
+    transform: scale(0.99);
+    opacity: 0.9;
+}
+/* side bar*/
+.side-bar{
+    position: fixed;
+    background-color: white;
+    width: 275px;
+    height: 94%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    z-index: 100;
+    transition: transform 0.15s ease-in;
+}
+.side-bar-list{ 
+    padding: 20px 0px;
+}
+#icon{
+    color:#329B56;
+    font-size: 16px;
+    width: 45px;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 2px 0;
+    user-select: none;  
+} 
+.list a{
+    text-decoration: none;
+    color: rgb(65, 60, 60);
+    font-weight: 500;
+    font-size: 13px;
+    padding: 7px 0 7px 35px;
+    letter-spacing: 1px;
+    cursor: pointer; 
+}
+.list a:hover{
+    background: whitesmoke;
+}
+.side-bar-active{
+    transform: translateX(0);
+}
+.list-drpdown{
+    display: flex;
+    flex-direction: column;
+    margin-left: 37px;
+    border-left: 3px solid gainsboro;
+    padding-left: 15px;
+    padding-right: 15px;
+    user-select: none;
+    display: none; 
+}
+.list-drpdown a{
+    text-decoration: none;
+    padding-left: 23px;
+    cursor: pointer;
+}
+.list-drpdown a:hover{
+    background: whitesmoke;
+}
+.fa-circle-o{
+    padding-right: 5px;
+}
+.items{
+    font-size: 12px;
+    color:gray;
+    font-weight: 500;
+}
+/* Alumni */
+.list-drpdown-1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 37px;
+    border-left: 3px solid gainsboro;
+    padding-left: 15px;
+    padding-right: 15px;
+    user-select: none;
+    display: none; 
+}
+.list-drpdown-1 a{
+    text-decoration: none;
+    padding-left: 23px;
+    cursor: pointer;
+}
+.list-drpdown-1 a:hover{
+    background: whitesmoke;
+}
+.items-1{
+    font-size: 12px;
+    color:gray;
+    font-weight: 500;
+}
+#arrow{
+    margin-left: 59px;
+}
+#arrow-1{
+    margin-left: 103px;
+}
+.active-2, .active-3{
+    display: block;
+    display: flex;
+}
+ /* Desktop */
+ @media (min-width:1591px){
+    .toggle{
+        display: none;
+    }
+    .content-box{
+        padding: 10px;
+        padding-left: 286px;
+    }
+}
+ 
+ @media (min-width:1394px) and (max-width:1590px){
+    .toggle{
+        display: none;
+    }
+    .content-box{
+        padding: 10px;
+        padding-left: 286px;
+    }
+    .row-2{
+        gap: 10px 0;
+    }
+    .box{
+        padding: 0; 
+        gap: 0 5px;
+    }
+    .buttons, .cty{
+        padding: 0;
+    }
+}
+
+@media (min-width:1100px) and (max-width:1393px){
+    .toggle{
+        display: none;
+    }
+    .content-box{
+        padding: 10px;
+        padding-left: 286px;
+    }
+    .row-2{
+        gap: 10px 0;
+    }
+    .box{
+        width: 50%;
+        padding: 0; 
+        gap: 0 5px;
+    }
+    .buttons, .cty{
+        padding: 0;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1099px){
+    .toggle{
+        display: none;
+    }
+    .content-box{
+        padding: 10px;
+        padding-left: 286px;
+    }
+    .buttons, .cty{
+       padding: 0;
+    }
+    .cty select{
+        width: 60%;
+    }
+    .row-2{
+        gap: 10px 0;
+    }
+    .box{
+        padding: 0; 
+        width: 100%;
+    }
+}
+/* Tablet */
+@media (min-width:768px) and (max-width:1023px){ 
+    .toggle{
+        display: block;
+    }
+    .content-box{
+       padding-left: 10px;
+    }
+     /* Side bar */
+     .side-bar{
+        transform: translateX(-100%);
+    }
+    .side-bar-active{
+        transform: translateX(0);
+    }
+    .row-2{
+        gap: 10px 0;
+    }
+    .box{
+        width: 50%;
+        padding: 0; 
+        gap: 0 5px;
+    }
+    .buttons, .cty{
+        padding: 0;
+    }
+}
+
+/* Mobile */
+@media (min-width:660px) and (max-width:767px){
+    .toggle{
+        display: block;
+    }
+    .content-box{
+       padding-left: 10px;
+    }
+     /* Side bar */
+     .side-bar{
+        transform: translateX(-100%);
+    }
+    .side-bar-active{
+        transform: translateX(0);
+    }
+    .buttons, .cty{
+        padding: 0;
+    }
+    .cty select{
+        width: 65%;
+    }
+    .row-2{
+        gap: 10px 0;
+    }
+    .box{
+        padding: 0; 
+        width: 100%;
+    }
+}
+
+@media (max-width:659px){
+    .toggle{
+        display: block;
+    }
+    .content-box{
+       padding-left: 10px;
+    }
+     /* Side bar */
+     .side-bar{
+        transform: translateX(-100%);
+    }
+    .side-bar-active{
+        transform: translateX(0);
+    }
+    .row-1{
+        flex-direction: column;
+        gap: 10px 0;
+    }
+    .buttons, .cty{
+        padding: 0;
+    }
+    .buttons button{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .cty select{
+        width: 100%;
+        padding: 13px 20px;
+    }
+    .row-2{
+        gap: 10px 0;
+    }
+    .box{
+        flex-direction: column;
+        padding: 0; 
+        width: 100%;
+    }
+}
+

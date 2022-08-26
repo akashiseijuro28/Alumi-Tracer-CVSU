@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Annoucement</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/new_announcement.css">
+     <!--font awesome-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container-2">
+        <div class="header">
+            <div class="toggle"><i class="fa fa-bars" id="btn"></i></div>
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+            <div class="name">
+                CvSU
+            </div>
+        </div>
+        <div class="side-bar">
+            <div class="side-bar-list">
+                <div class="list">
+                    <a href="dashboard.html"><i class="fa fa-home" id="icon"></i>Dashboard</a>
+                    <a href=""><i class="fa fa-user" id="icon"></i>Profile</a>
+                    <a onclick="myFunction()"><i class="fa fa-bullhorn" id="icon"  style="color:rgb(230, 172, 62);"></i>Annoucement <i class="fa fa-caret-right" aria-hidden="true" id="arrow"></i></a>
+                    <div class="list-drpdown">
+                       <a href="announcement.html"><div class="items"><i class="fa fa-circle-o" aria-hidden="true" style="color: #7BADEE;"></i> Annoucement List</div></a>
+                       <a href="new_announcement.html"><div class="items"><i class="fa fa-circle-o" aria-hidden="true" style="color: #FC3134;"></i> Create Annoucement</div></a>
+                       <a href="news.html"><div class="items"><i class="fa fa-circle-o" aria-hidden="true" style="color: #00c04b;"></i> News and Events</div></a>
+                    </div>
+                    <a onclick="myFunction_1()"><i class="fa fa-graduation-cap" id="icon"></i>Alumni <i class="fa fa-caret-right" aria-hidden="true" id="arrow-1"></i></a>
+                    <div class="list-drpdown-1">
+                        <a href="alumni.html"><div class="items-1"><i class="fa fa-circle-o" aria-hidden="true" style="color: #7BADEE;"></i> Alumni List</div></a>
+                        <a href=""><div class="items-1"><i class="fa fa-circle-o" aria-hidden="true" style="color: #FC3134;"></i> Access Role</div></a>
+                     </div>
+                    <a href="email.html"><i class="fa fa-envelope" id="icon"></i>Email</a>
+                    <a href=""><i class="fa fa-exclamation-circle" id="icon"></i>Report</a>
+                    <a href=""><i class="fa fa-sign-out" id="icon"></i>Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="content-box"> <!-- Start -->
+            <div class="content">  
+                <div class="head-page">
+                    <div class="text">
+                        <h1>Create an Announcement</h1>
+                    </div>
+                    <div class="back">
+                        <a href="announcement.html"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go back</a>
+                    </div>   
+                </div>
+               <div class="container-data">
+                    <form action="">
+                        <div class="input-data">
+                            <div class="row">
+                                <div class="col-1">
+                                    <div class="date">
+                                        <div class="from-date">
+                                            <label for="">From date</label>
+                                            <input type="date" id="from" required>
+                                        </div>
+                                        <div class="to-date">
+                                            <label for="">To date</label>
+                                            <input type="date" id="to" required>
+                                        </div>
+                                    </div>
+                                    <div class="post-title">
+                                        <label for="">Post title</label>
+                                        <input type="text" placeholder="Place title here" required>
+                                    </div>
+                                    <div class="category">
+                                        <div class="cty-1">
+                                            <label for="">Category</label>
+                                            <select name="" id="" required>
+                                                <option value="" disabled selected hidden>Open this select menu</option>
+                                                <option value="">Sample1</option>
+                                                <option value="">Sample2</option>
+                                                <option value="">Sample3</option>
+                                                <option value="">Sample4</option>
+                                            </select>
+                                        </div>
+                                        <div class="cty-2">
+                                            <label for="">Sub Category</label>
+                                            <select name="" id="" required>
+                                                <option value="" disabled selected hidden>Open this select menu</option>
+                                                <option value="">Sample1</option>
+                                                <option value="">Sample2</option>
+                                                <option value="">Sample3</option>
+                                                <option value="">Sample4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                        <img src="img/undraw_referral_re_0aji.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="details">
+                                <label for="">Post details</label>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Click here to reply" required></textarea>
+                            </div>
+                            <div class="file">
+                                <label for="">Featured imaged</label>
+                                <input type="file" id="file" accept="image/png, image/gif, image/jpeg">
+                            </div>
+                            <div class="buttons">
+                                <button type="submit" id="send">Send</button>
+                                <span>Draft</span>
+                                <button type="reset" id="discard">Discard</button>
+                            </div> 
+                        </div>
+                    </form>
+               </div>
+            </div>
+        </div> <!-- End -->
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
